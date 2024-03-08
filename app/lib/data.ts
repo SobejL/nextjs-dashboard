@@ -22,11 +22,11 @@ export async function fetchRevenue() {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
-//     Here, you've added an artificial 3-second delay to simulate a slow data fetch. The result is that now your whole page is blocked while the data is being fetched.
+// Here, you've added an artificial 3-second delay to simulate a slow data fetch. The result is that now your whole page is blocked while the data is being fetched.
 // Which brings us to a common challenge developers have to solve:
 // With dynamic rendering, your application is only as fast as your slowest data fetch.
     console.log('Fetching revenue data...');
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
@@ -52,7 +52,7 @@ export async function fetchLatestInvoices() {
 // With dynamic rendering, your application is only as fast as your slowest data fetch.
  
   console.log('Fetching revenue data...');
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  // await new Promise((resolve) => setTimeout(resolve, 1000));
 
 
   try {

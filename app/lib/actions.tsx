@@ -7,13 +7,6 @@ import { redirect } from 'next/navigation';
 import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
  
-// const FormSchema = z.object({
-//   id: z.string(),
-//   customerId: z.string(),
-//   amount: z.coerce.number(),
-//   status: z.enum(['pending', 'paid']),
-//   date: z.string(),
-// });
 
 export async function authenticate(
   prevState: string | undefined,
